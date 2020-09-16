@@ -38,6 +38,7 @@ body {
 
 /* For nprogress */
 /* Make clicks pass-through */
+/* purgecss start ignore */
 #nprogress {
   pointer-events: none;
 }
@@ -110,3 +111,4 @@ body {
   0%   { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
 }
+/* purgecss end ignore */
