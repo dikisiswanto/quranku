@@ -1,16 +1,42 @@
-html,
+@font-face {
+	font-family: "lpmq";
+	src: url(/fonts/lpmq.otf) format("opentype");
+	font-display: swap;
+}
+
+/* purgecss start ignore */
+@tailwind base;
+@tailwind components;
+/* purgecss end ignore */
+@tailwind utilities;
+
 body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+	font-family: "Source Sans Pro", sans-serif;
+	@apply bg-gray-200;
+	min-height: 100vh;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+.content {
+	flex: 1;
+	min-height: calc(100vh - 11rem);
 }
 
-* {
-  box-sizing: border-box;
+.container,
+.wrapper {
+	max-width: 768px;
+	@apply mx-auto px-3;
+}
+
+.text-arabic {
+	font-family: "lpmq", Arial, sans-serif;
+	line-height: 2;
+}
+
+.bottom-2 {
+	bottom: .75rem;
+}
+
+#nprogress .bar {
+	height: 4px;
+	@apply bg-teal-500;
 }
