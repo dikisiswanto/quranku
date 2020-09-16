@@ -37,6 +37,6 @@ body {
 }
 
 #nprogress .bar {
-	height: 4px;
-	@apply bg-orange-600;
+	height: 3px;
+	@apply bg-teal-800;
 }
