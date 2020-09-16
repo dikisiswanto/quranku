@@ -4,7 +4,7 @@ import Footer from '../components/footer';
 import Header from '../components/header';
 import ApiService from '../services/api';
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
   const surahs = await ApiService.getAllSurah();
   const featuredSurahs = ['Yasin', 'Al-Kahf', 'Al-Mulk', 'Ar-Rahman', 'Al-Waqi\'ah', 'Yusuf'];
   const recommendedSurahs = surahs.filter(
