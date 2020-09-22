@@ -14,7 +14,7 @@ export async function getStaticProps() {
   };
 }
 
-export default function ListSurah({ surahs }) {
+export default function ListSurahPage({ surahs }) {
   const [allSurahs, setFilteredSurah] = useState(surahs);
 
   const filterSurah = (event) => {

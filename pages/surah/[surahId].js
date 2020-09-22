@@ -20,7 +20,7 @@ export async function getServerSideProps({ params }) {
   };
 }
 
-export default function Surah({ surah, previousSurah, nextSurah }) {
+export default function SurahPage({ surah, previousSurah, nextSurah }) {
   return (
     <>
       <Head>

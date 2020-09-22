@@ -25,7 +25,7 @@ export default function About() {
           <h4 className="text-semibold font-lg">Teknologi Pendukung</h4>
           <span className="block text-gray-700">
             <Link href="https://nextjs.org">
-              <a target="_blank" rel="noopener noreferrer" className="text-teal-700 underline px-2">NextJS</a>
+              <a target="_blank" rel="noopener noreferrer" className="text-teal-700 underline px-2">Next.js</a>
             </Link>
             <Link href="https://tailwindcss.com">
               <a target="_blank" rel="noopener noreferrer" className="text-teal-700 underline px-2">TailwindCSS</a>
