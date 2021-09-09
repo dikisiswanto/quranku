@@ -5,7 +5,7 @@ import Footer from '../../components/footer';
 import ApiService from '../../services/api';
 import app from '../../data/app.json';
 
-export async function getServerSideProps({ params }) {
+export async function getStaticProps({ params }) {
   const { surahId } = params;
   const surah = await ApiService.getSurah(surahId);
   const previousSurah = await ApiService.getSurah(parseInt(surahId, 10) - 1);
@@ -18,6 +18,15 @@ export async function getServerSideProps({ params }) {
       nextSurah,
     },
   };
+}
+
+export async function getStaticPaths() {
+  const surahs = await ApiService.getAllSurah();
+  const paths = surahs.map((surah) => ({
+    params: { surahId: `${surah.number}` },
+  }));
+
+  return { paths, fallback: false };
 }
 
 export default function SurahPage({ surah, previousSurah, nextSurah }) {
